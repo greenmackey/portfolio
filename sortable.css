@@ -1,0 +1,13 @@
+body {
+  background: #efefef;
+  font-family: 'Courier New', monospace;
+}
+
+ul {
+  width: 100px;
+  background-color: lightblue;
+}
+
+li {
+  cursor: pointer;
+}
