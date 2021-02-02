@@ -1,5 +1,52 @@
 
-$primary: green;
+$primary: darken(#7BC734, 10);
+$h1-font-size: 4rem;
 
 @import "node_modules/bootstrap/scss/bootstrap";
+
+$bg-color: #F8F6E9;
+$title-font-size: 5.5rem;
+
+body {
+  background-color: $bg-color;
+}
+
+h1 {
+  color: $primary;
+}
+
+header {
+  position: relative;
+
+  p {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    color: $primary;
+    @include font-size($title-font-size);
+    text-align: center;
+  }
+
+
+  .image-cow {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 10px;
+  }
+
+}
+
+@media (min-width: map-get($map: $grid-breakpoints, $key: lg)) and
+        (orientation: landscape) {
+  header {
+    .image-cow {
+      height: 100vh;
+      width: auto;
+    }
+  }
+}
 
