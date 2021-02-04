@@ -1,20 +1,31 @@
 
 $primary: darken(#7BC734, 10);
 $h1-font-size: 4rem;
+$body-bg: #F8F6E9;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-$bg-color: #F8F6E9;
+// $bg-color: #F8F6E9;
 $title-font-size: 5.5rem;
+$image-cow-xy-ratio: 0.7727;
 
 body {
-  background-color: $bg-color;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
 }
+
 
 h1 {
   color: $primary;
 }
 
+
+$image-cow-width-percent: 85;
+$image-cow-height: 100vw * $image-cow-width-percent / 100 * $image-cow-xy-ratio;
 header {
   position: relative;
 
@@ -32,7 +43,7 @@ header {
 
 
   .image-cow {
-    width: 100%;
+    width: $image-cow-width-percent * 1%;
     margin: 0 auto;
     display: block;
     padding-top: 10px;
@@ -42,11 +53,171 @@ header {
 
 @media (min-width: map-get($map: $grid-breakpoints, $key: lg)) and
         (orientation: landscape) {
+// @media (orientation: landscape) {
   header {
+    height: 100vh;
     .image-cow {
-      height: 100vh;
+      height: 100%;
       width: auto;
+    }
+  }
+
+  .section-1 {
+    // ankerでとんだときnavのstickyでheadingがかぶらないようにする
+    padding-top: 10vh * 1.2;
+    margin-top: -10vh * 1.2;
+  }
+}
+
+.section-1 {
+  width: 80%;
+  max-width: 760px;
+  // height: 100vh;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  // ankerでとんだときnavのstickyでheadingがかぶらないようにする
+  padding-top: 10vh;
+  padding-top: 0.1 * $image-cow-height * 1.5;
+  margin-top: -0.1 * $image-cow-height * 1.5;
+}
+
+.section-2 {
+  // max-width: 700px;
+  // margin: 0 auto 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.col-6 {
+  // text-align: center;
+  font-size: 1.5rem;
+}
+
+i.fa-arrow-alt-circle-right {
+  @include font-size(2rem);
+  display: inline-block;
+  margin: auto 0;
+}
+
+h2 a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.col-4, .col-8 {
+  border: 1px solid gray;
+}
+
+.col-8 {
+  // height: 200px;
+}
+
+.col-4 {
+  height: 200px;
+}
+
+.row {
+  width: 100%;
+}
+
+.image-social-choice {
+  width: 200px;
+  height: 200px;
+}
+
+.image-container {
+  img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid lightgray;
+  }
+}
+
+.btn-primary {
+  color: $body-bg;
+}
+
+
+
+
+nav {
+
+  $margin-top-ratio: 0.12;
+  $margin-bottom-ratio: 0.05;
+  $btn-height-ratio: 0.08;
+  $image-cow-height: 100vw * $image-cow-width-percent / 100 * $image-cow-xy-ratio;
+  $btn-height: $btn-height-ratio * $image-cow-height;
+
+  position: sticky;
+  top: 0;
+  // margin-top: -12 / 100 * 100vw * 0.85 * $image-cow-xy-ratio;
+  margin-top: -$margin-top-ratio * $image-cow-height;
+  // margin-bottom: 5 / 100 * 100vw * 0.85 * $image-cow-xy-ratio;
+  margin-bottom: $margin-bottom-ratio * $image-cow-height;
+
+  .custom-row {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh auto 0;
+    width: 90%;
+    // height: 8vh;
+    // $btn-height: 100vw * 0.85 * $image-cow-xy-ratio * 0.08;
+    height: $btn-height;
+    background-color: $body-bg;
+    font-size: $btn-height * 0.4;
+    border: 2px solid;
+    &:hover {
+      color: $body-bg;
+      background-color: $primary;
+    }
+  }
+
+  @media (min-width: map-get($map: $grid-breakpoints, $key: lg)) and (orientation: landscape) {
+  // @media (orientation: landscape) {
+    // position: sticky;
+    // top: 0;
+    // margin-top: -12vh;
+    margin-top: -100vh * $margin-top-ratio;
+    // margin-bottom: 5vh;
+    margin-bottom: 100vh * $margin-bottom-ratio;
+
+    .custom-row {
+      // display: flex;
+      // flex-direction: row;
+
+      .btn {
+        // display: block;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        margin: 2vh auto 0;
+        // width: 90%;
+        height: 8vh;
+        // background-color: $body-bg;
+        font-size: 1.5rem;
+        // &:hover {
+        //   color: $body-bg;
+        //   background-color: $primary;
+        // }
+      }
+    }
+  }
+
+  @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
+    .btn {
+      font-size: $btn-height * 0.6;
     }
   }
 }
 
+footer {
+  height: 1rem;
+  background-color: $primary;
+}
