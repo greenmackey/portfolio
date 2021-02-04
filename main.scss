@@ -218,6 +218,8 @@ nav {
 }
 
 footer {
-  height: 1rem;
-  background-color: $primary;
+  height: 1.5rem;
+  // background-color: $primary;
+  background-image: url("footer-grass.svg");
+  background-size: contain;
 }
