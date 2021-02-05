@@ -3,3 +3,6 @@
 main.css
 main.css.map
 /.sass-cache
+
+# パッケージ
+/node_modules

@@ -130,6 +130,7 @@ h2 a {
     width: 200px;
     height: 200px;
     border: 1px solid lightgray;
+    border-radius: 5px;
   }
 }
 
@@ -143,7 +144,7 @@ h2 a {
 nav {
 
   $margin-top-ratio: 0.12;
-  $margin-bottom-ratio: 0.05;
+  $margin-bottom-ratio: 0.08;
   $btn-height-ratio: 0.08;
   $image-cow-height: 100vw * $image-cow-width-percent / 100 * $image-cow-xy-ratio;
   $btn-height: $btn-height-ratio * $image-cow-height;
@@ -172,7 +173,6 @@ nav {
     height: $btn-height;
     background-color: $body-bg;
     font-size: $btn-height * 0.4;
-    border: 2px solid;
     &:hover {
       color: $body-bg;
       background-color: $primary;
@@ -202,6 +202,7 @@ nav {
         height: 8vh;
         // background-color: $body-bg;
         font-size: 1.5rem;
+        border: 2px solid;
         // &:hover {
         //   color: $body-bg;
         //   background-color: $primary;
@@ -213,6 +214,7 @@ nav {
   @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
     .btn {
       font-size: $btn-height * 0.6;
+      border: 1px solid;
     }
   }
 }
@@ -220,6 +222,6 @@ nav {
 footer {
   height: 1.5rem;
   // background-color: $primary;
-  background-image: url("footer-grass.svg");
+  background-image: url("images/footer-grass.svg");
   background-size: contain;
 }
