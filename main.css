@@ -10639,6 +10639,7 @@ header p {
   left: 0;
   right: 0;
   margin: auto;
+  width: 90%;
   color: #629f29;
   font-size: calc(1.675rem + 5.1vw);
   text-align: center;
@@ -10654,7 +10655,7 @@ header .fv-image {
   display: block;
 }
 
-@media (min-width: 992px) and (orientation: landscape) {
+@media (min-width: 992px) and (min-aspect-ratio: 1.2941633234) {
   header {
     height: 100vh;
   }
@@ -10690,7 +10691,7 @@ nav .btn {
   height: 5.25436vw;
   font-size: 2.101744vw;
 }
-@media (min-width: 992px) and (orientation: landscape) {
+@media (min-width: 992px) and (min-aspect-ratio: 1.2941633234) {
   nav {
     margin-top: -12vh;
     padding: 2vh 0;
@@ -10723,7 +10724,7 @@ nav .btn {
   padding-top: 6.56795vw;
   margin-top: -6.56795vw;
 }
-@media (min-width: 992px) and (orientation: landscape) {
+@media (min-width: 992px) and (min-aspect-ratio: 1.2941633234) {
   .section-1 {
     padding-top: 10vh;
     margin-top: -10vh;
