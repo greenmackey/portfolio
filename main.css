@@ -10655,7 +10655,7 @@ header .fv-image {
   display: block;
 }
 
-@media (min-width: 992px) and (min-aspect-ratio: 1.2941633234) {
+@media (min-width: 992px) and (min-aspect-ratio: 10000/7727) {
   header {
     height: 100vh;
   }
@@ -10691,7 +10691,7 @@ nav .btn {
   height: 5.25436vw;
   font-size: 2.101744vw;
 }
-@media (min-width: 992px) and (min-aspect-ratio: 1.2941633234) {
+@media (min-width: 992px) and (min-aspect-ratio: 10000/7727) {
   nav {
     margin-top: -12vh;
     padding: 2vh 0;
@@ -10707,7 +10707,7 @@ nav .btn {
     position: fixed;
     top: initial;
     bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
   nav .btn {
     height: 2.5rem;
@@ -10724,7 +10724,7 @@ nav .btn {
   padding-top: 6.56795vw;
   margin-top: -6.56795vw;
 }
-@media (min-width: 992px) and (min-aspect-ratio: 1.2941633234) {
+@media (min-width: 992px) and (min-aspect-ratio: 10000/7727) {
   .section-1 {
     padding-top: 10vh;
     margin-top: -10vh;
